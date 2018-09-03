@@ -22,6 +22,8 @@ public class FlipperView {
     @DrawableRes
     private int imageRes;
 
+    private int id;
+
     private String imageUrl;
 
     private ImageView.ScaleType scaleType = ImageView.ScaleType.CENTER_CROP;
@@ -38,6 +40,14 @@ public class FlipperView {
     public FlipperView setDescription(String description) {
         this.description = description;
         return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getImageRes() {

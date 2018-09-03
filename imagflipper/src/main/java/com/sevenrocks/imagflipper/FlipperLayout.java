@@ -98,7 +98,16 @@ public class FlipperLayout extends FrameLayout implements
         } else {
             throw new NullPointerException("Adapter not set");
         }
+
     }
+
+    public void setCurrentPage(int i){
+        mFlippingPager.setCurrentItem(i);
+
+
+    }
+
+
 
     /*
      * Use for setting up of FlipperLayout, instantiating view pager, pager indicator
