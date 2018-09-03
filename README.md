@@ -11,9 +11,10 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.Aqil92:AutoFlipperImage:1.0'
+	        implementation 'com.github.Aqil92:AutoFlipperImage:1.01'
 	}
   
+  activity_main.xml
   <?xml version="1.0" encoding="utf-8"?>
 <com.sevenrocks.imagflipper.FlipperLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,7 +22,8 @@ Step 2. Add the dependency
     android:layout_width="match_parent"
     android:layout_height="300dp"
     tools:context=".MainActivity" />
-    
+ 
+ MainActivity.java
     
 public class MainActivity extends AppCompatActivity {
 
