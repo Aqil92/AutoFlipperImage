@@ -98,7 +98,8 @@ public class FlipperView {
         return view;
     }
 
-    public FlipperView setOnFlipperClickListener(FlipperView.OnFlipperClickListener l) {
+    public FlipperView setOnFlipperClickListener(FlipperView.OnFlipperClickListener l)
+    {
         onFlipperClickListener = l;
         return this;
     }

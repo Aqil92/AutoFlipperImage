@@ -3,6 +3,7 @@ package com.sevenrocks.imagflipper;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -14,7 +15,10 @@ class FlipperAdapter extends PagerAdapter {
     private Context context;
     private ArrayList<FlipperView> flipperViews = new ArrayList<>();
 
+
+
     FlipperAdapter(Context context) {
+
         this.context = context;
     }
 
@@ -54,7 +58,10 @@ class FlipperAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         FlipperView imageFlipperView = flipperViews.get(position);
         View v = imageFlipperView.getView();
+
+
         container.addView(v);
+
         return v;
     }
 

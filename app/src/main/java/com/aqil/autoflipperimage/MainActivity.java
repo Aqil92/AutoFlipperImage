@@ -3,16 +3,20 @@ package com.aqil.autoflipperimage;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.DragEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
+import com.sevenrocks.imagflipper.CircularFlipperHandler;
 import com.sevenrocks.imagflipper.FlipperLayout;
 import com.sevenrocks.imagflipper.FlipperView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FlipperLayout.CurrentPager  {
 
     FlipperLayout flipperLayout;
+  public   CircularFlipperHandler circularFlipperHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         flipperLayout = findViewById(R.id.flipper_layout);
-
+        flipperLayout.setPagerInterface(this);
         setLayout();
     }
 
@@ -44,21 +48,19 @@ public class MainActivity extends AppCompatActivity {
             view.setId(i);
             flipperLayout.addFlipperView(view);
 
+
             view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
                 @Override
                 public void onFlipperClick(FlipperView flipperView) {
 
-                    Toast.makeText(MainActivity.this
-                            , "Here " + (flipperView.getId())
-                            , Toast.LENGTH_SHORT).show();
-
                 }
             });
-
-
         }
+    }
 
-        //you can set current item by its postsition
-      //  flipperLayout.setCurrentPage(2);
+
+    @Override
+    public void onChanged(int currentPosition) {
+        Log.v("onCurrentPageChanged","ddd"+currentPosition);
     }
 }
