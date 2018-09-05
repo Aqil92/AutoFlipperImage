@@ -11,7 +11,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.Aqil92:AutoFlipperImage:1.01'
+	        implementation 'com.github.Aqil92:AutoFlipperImage://CHECK LATEST RELEASE VERSION'
 	}
   
   activity_main.xml
