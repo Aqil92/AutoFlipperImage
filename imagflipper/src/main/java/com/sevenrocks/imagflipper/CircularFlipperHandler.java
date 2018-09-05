@@ -1,6 +1,7 @@
 package com.sevenrocks.imagflipper;
 
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 public class CircularFlipperHandler implements ViewPager.OnPageChangeListener {
     private ViewPager mViewPager;
@@ -29,7 +30,8 @@ public class CircularFlipperHandler implements ViewPager.OnPageChangeListener {
             int previousState = mCurrentPosition;
             mCurrentPosition = state;
             if (previousState == 1 && mCurrentPosition == 0) {
-               mViewPager.setCurrentItem(currentPage == 0 ? mViewPager.getAdapter().getCount() - 1 : 0);
+               // Log.v("onPteChanged",currentPage+" "+state+" "+mViewPager.getAdapter().getCount());
+              // mViewPager.setCurrentItem(currentPage == 0 ? mViewPager.getAdapter().getCount() - 1 : 0);
             }
         }
     }
