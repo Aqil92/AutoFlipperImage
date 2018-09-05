@@ -61,6 +61,6 @@ public class MainActivity extends AppCompatActivity implements FlipperLayout.Cur
 
     @Override
     public void onChanged(int currentPosition) {
-        Log.v("onCurrentPageChanged","ddd"+currentPosition);
+        Log.v("onCurrentPageChanged","ddd "+currentPosition);
     }
 }

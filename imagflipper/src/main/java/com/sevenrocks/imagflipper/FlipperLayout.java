@@ -170,7 +170,6 @@ public class FlipperLayout extends FrameLayout implements
     @Override
     public void onCurrentPageChanged(int currentPosition) {
         this.currentPage = currentPosition;
-        Log.v("onCurrentPageChanged","ddd "+currentPosition);
         pagerInterface.onChanged(currentPosition);
     }
 
